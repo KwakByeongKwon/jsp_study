@@ -9,6 +9,19 @@ public class BoardVo {
 	private String content;
 	private Date regdate;
 	private int cnt;
+	
+	public BoardVo() {}
+	
+	public BoardVo(int num, String title, String writer, String content, Date regdate, int cnt) {
+		super();
+		this.num = num;
+		this.title = title;
+		this.writer = writer;
+		this.content = content;
+		this.regdate = regdate;
+		this.cnt = cnt;
+	}
+	
 	public int getNum() {
 		return num;
 	}
@@ -46,17 +59,9 @@ public class BoardVo {
 		this.cnt = cnt;
 	}
 	
-	public BoardVo() {}
+
 	
-	public BoardVo(int num, String title, String writer, String content, Date regdate, int cnt) {
-		super();
-		this.num = num;
-		this.title = title;
-		this.writer = writer;
-		this.content = content;
-		this.regdate = regdate;
-		this.cnt = cnt;
-	}
+
 	@Override
 	public String toString() {
 		return "BoardVo [num=" + num + ", title=" + title + ", writer=" + writer + ", content=" + content + ", regdate="

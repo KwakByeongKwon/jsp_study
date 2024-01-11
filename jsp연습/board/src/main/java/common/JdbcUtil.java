@@ -28,7 +28,7 @@ public class JdbcUtil {
 	
 	private JdbcUtil() {}
 	
-	public JdbcUtil getInstance() {
+	public static JdbcUtil getInstance() {
 		return instance;
 	}
 	
