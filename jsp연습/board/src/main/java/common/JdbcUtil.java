@@ -16,7 +16,7 @@ public class JdbcUtil {
 			Class.forName("oracle.jdbc.OracleDriver");
 			System.out.println("드라이버 로딩 성공!");
 			InitialContext ctx = new InitialContext();
-			ds = (DataSource)ctx.lookup("java:comp/env/jdbc/myOracle");
+			ds = (DataSource)ctx.lookup("java:comp/env/jdbc/myOracle"); // 데이터베이스 선언
 			System.out.println("Connection Pool 생성");
 			
 		} catch(ClassNotFoundException e) {

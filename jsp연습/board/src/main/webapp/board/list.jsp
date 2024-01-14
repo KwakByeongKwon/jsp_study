@@ -21,6 +21,7 @@
 	<th>작성자</th>
 	<th>작성일</th>
 	<th>조회수</th>
+	<th colspan="2">기타</th>
 </tr>
 <c:forEach var="board" items="${ls}">
 <tr>
@@ -29,6 +30,8 @@
 	<td>${board.getWriter()}</td>
 	<td>${board.getRegdate()}</td>
 	<td>${board.getCnt()}</td>
+	<td><a href="${pageContext.request.contextPath}/board/boardDelete.jsp?num=${board.num}">삭제</a></td>
+	<td><a href="${pageContext.request.contextPath}/board/editForm.jsp?num=${board.num}">수정</a></td>
 </tr>
 </c:forEach>
 </table>
