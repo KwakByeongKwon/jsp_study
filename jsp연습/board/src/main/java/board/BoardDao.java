@@ -69,7 +69,7 @@ public class BoardDao {
 						rs.getString(2),
 						rs.getString(3),
 						rs.getString(4),
-						new Date(rs.getDate(5).getTime()),
+						new Date(rs.getTimestamp(5).getTime()),
 						rs.getInt(6));
 				ls.add(vo); // 저장했던 값 리스트에 저장
 			}
@@ -120,7 +120,7 @@ public class BoardDao {
 						rs.getString(2),
 						rs.getString(3),
 						rs.getString(4),
-						new Date(rs.getDate(5).getTime()),
+						new Date(rs.getTimestamp(5).getTime()),
 						rs.getInt(6));
 			}
 			

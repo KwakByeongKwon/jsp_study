@@ -6,25 +6,21 @@
 <%
 	int num = Integer.parseInt(request.getParameter("num"));
 %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
+<%@ include file="header.jsp" %>
 <title>삭제 확인</title>
 </head>
 <body>
-<table border="1">	
-	<tr>
-		<th>정말 삭제 하시겠습니까? &nbsp
-			<form action="delete.jsp?num=<%= num %>">
-				<input type="hidden" name="num" value="<%= num %>" />
-				<input type="submit" value="예">
-			</form>
-			<form action="list.jsp">
-				<input type="submit" value="목록으로">
-			</form>
-		</th>	
-	</tr>
-</table>
+<br>
+<div class="container text-center" style="width:500px" >
+	<div class="card border-dark mb-3" style="max-width: 50rem;">
+		<h1>정말 삭제 하시겠습니까?</h1>
+		<div class="card-body">	
+			<div class="d-flex justify-content-between align-items-center">
+				<a href="delete.jsp?num=<%= num %>" class="btn btn-danger">예</a>
+				<a href="list.jsp" class="btn btn-primary">목록으로</a>
+			</div>
+		</div>
+	</div>
+</div>
 </body>
 </html>

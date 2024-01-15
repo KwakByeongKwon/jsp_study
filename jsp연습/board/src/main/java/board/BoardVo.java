@@ -1,5 +1,6 @@
 package board;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 // "NUM","TITLE","WRITER","CONTENT","REGDATE","CNT"
 public class BoardVo {
@@ -59,7 +60,10 @@ public class BoardVo {
 		this.cnt = cnt;
 	}
 	
-
+	public String getFormattedRegdate() {
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		return sdf.format(regdate);
+	}
 	
 
 	@Override

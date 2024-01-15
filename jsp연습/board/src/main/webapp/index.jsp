@@ -7,7 +7,8 @@
 <title>메인페이지</title>
 </head>
 <body>
-<h1>메인 INDEX</h1>
-<a href="board/list.jsp">게시판</a>
+	<%
+		response.sendRedirect("login/login.jsp");
+	%>
 </body>
 </html>
