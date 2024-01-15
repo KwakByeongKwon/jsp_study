@@ -30,7 +30,7 @@
 	<td>${board.getWriter()}</td>
 	<td>${board.getRegdate()}</td>
 	<td>${board.getCnt()}</td>
-	<td><a href="${pageContext.request.contextPath}/board/boardDelete.jsp?num=${board.num}">삭제</a></td>
+	<td><a href="${pageContext.request.contextPath}/board/deleteForm.jsp?num=${board.num}">삭제</a></td>
 	<td><a href="${pageContext.request.contextPath}/board/editForm.jsp?num=${board.num}">수정</a></td>
 </tr>
 </c:forEach>

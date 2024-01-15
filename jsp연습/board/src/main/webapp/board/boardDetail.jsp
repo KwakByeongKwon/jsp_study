@@ -7,6 +7,7 @@
 	int num = Integer.parseInt(request.getParameter("num"));
 	BoardVo vo = dao.selectOne(num);
 	pageContext.setAttribute("vo", vo);
+	dao.updateCnt(num);
 %>
 <!DOCTYPE html>
 <html>
@@ -36,7 +37,10 @@
 	<tr>
 		<td colspan="5">${vo.content}</td>
 	</tr>
-	
 </table>
+<a href="${pageContext.request.contextPath}/board/editForm.jsp?num=${vo.num}"><button>수정</button></a>
+<a href="${pageContext.request.contextPath}/board/deleteForm.jsp?num=${vo.num}"><button>삭제</button></a>
+<br>
+<a href="list.jsp"><button>목록으로</button></a>
 </body>
 </html>

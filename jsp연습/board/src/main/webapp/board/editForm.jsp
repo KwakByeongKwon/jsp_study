@@ -20,6 +20,7 @@
 </head>
 <body>	
 <form action="edit.jsp" method="post">
+	<input type="hidden" name="num" value="${vo.num}">
 	<table border="1">
 		<tr>
 			<th>제목:</th>
@@ -30,7 +31,7 @@
 		<tr>
 			<th>작성자:</th>
 			<td>
-				<input type="text" name="writer" value="${vo.writer}" placeholder="작성자" required>
+				<input type="text" name="writer" value="${vo.writer}" placeholder="작성자" disabled>
 			</td>
 		</tr>
 		<tr>	
