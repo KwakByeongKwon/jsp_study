@@ -57,7 +57,6 @@ public class BoardVo {
 	public void setCnt(int cnt) {
 		this.cnt = cnt;
 	}
-
 	@Override
 	public String toString() {
 		return "BoardVo [num=" + num + ", title=" + title + ", writer=" + writer + ", content=" + content + ", regdate="

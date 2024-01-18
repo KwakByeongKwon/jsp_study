@@ -17,14 +17,14 @@ public class JdbcUtil {
 			System.out.println("드라이버 로딩 성공!");
 			InitialContext ctx = new InitialContext();
 			ds = (DataSource)ctx.lookup("java:comp/env/jdbc/myOracle");
-			System.out.println("Connections Pool 생성");
+			System.out.println("Connection Pool 생성");
+			
 		} catch(ClassNotFoundException e) {
 			e.printStackTrace();
-		} catch (NamingException e) {
+		} catch(NamingException e) {
 			e.printStackTrace();
 		}
 	}
-	
 	
 	private JdbcUtil() {}
 	
@@ -32,7 +32,7 @@ public class JdbcUtil {
 		return instance;
 	}
 	
-	public Connection getConnecction() throws SQLException{
+	public Connection getConnection() throws SQLException{
 		return ds.getConnection();
 	}
 }

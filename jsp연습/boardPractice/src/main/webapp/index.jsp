@@ -8,6 +8,6 @@
 </head>
 <body>
 <h1>메인화면 입니다.</h1>
-<a href="#">게시판</a>
+<a href="/boardPractice/board/list.jsp">게시판</a>
 </body>
 </html>
